@@ -11,6 +11,7 @@ psd/
 
 # Ignore everything in the "app" directory, except the "plugins" and "themes" directories.
 app/*
+!app/*.sql
 !app/wp-content/
 
 # Ignore everything in the "wp-content" directory, except the "plugins" and "themes" directories.

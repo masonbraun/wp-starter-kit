@@ -1,23 +1,28 @@
-# wp-starter-kit
+# Wordpress Starter Kit
 
-# configure wordpress cli
+### Download & Configure Wordpress CLI
 
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-chmod +x wp-cli.phar
-sudo mv wp-cli.phar /usr/local/bin/wp
+```sh
+$ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+$ chmod +x wp-cli.phar
+$ sudo mv wp-cli.phar /usr/local/bin/wp
+```
 
-# configure bash profile to point to mamp instance of PHP
+### Configure .bash_profile to use MAMP instance of PHP
 
+```sh
 export MAMP_PHP=/Applications/MAMP/bin/php/php5.5.10/bin
 export PATH="$MAMP_PHP:$PATH"
 export PATH=$PATH:/Applications/MAMP/Library/bin/
+```
 
-# clone the repository into a directory
+### Clone Respository
 
-git@github.com:masonbraun/wp-starter-kit.git
-
-cd wp-starter-kit
-cd app
+```sh
+$ git@github.com:masonbraun/wp-starter-kit.git
+$ cd wp-starter-kit
+$ cd app
+```
 
 # download core wordpress files
 wp core download
@@ -49,14 +54,3 @@ wp core update
 wp plugin install advanced-custom-fields --activate
 wp plugin install timber-library --activate
 wp plugin install wp-migrate-db --activate
-
-
-
-
-
-wp search-replace example.com newexample.com --dry-run
-wp db import example_com.sql
-wp db export
-
-wp db export --add-drop-table
-
